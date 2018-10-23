@@ -1,0 +1,63 @@
+html,body,page{
+    height: 100%;
+    width: 100%;
+
+
+}
+page{
+    font-size: 280px;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    padding-left: 30%;
+    padding-top: 30%;
+}
+#c{
+    background-color: greenyellow;
+    animation: c 2s infinite;
+    animation-timing-function: ease
+
+}
+#x{
+    background-color: yellow;
+    animation: x 2s infinite;
+    animation-timing-function: ease
+}
+#q{
+    background-color:darkorange;
+    animation: q 2s infinite;
+    animation-timing-function: ease
+
+}
+#d{
+    background-color:darkmagenta;
+    animation: d 2s infinite;
+    animation-timing-function: ease
+
+}
+@keyframes  c {
+    0%  {opacity: 0}
+    20%{opacity: 100}
+    40%{opacity: 0}
+    100%{opacity: 0}
+}
+@keyframes  x {
+    0%  {opacity: 0}
+    20%{opacity: 0}
+    40%{opacity: 100}
+    60%{opacity: 0}
+    100%{opacity: 0}
+}
+@keyframes  q {
+    0%  {opacity: 0}
+    40%{opacity: 0}
+    60%{opacity: 100}
+    80%{opacity: 0}
+    100%{opacity: 0}
+}
+@keyframes  d {
+    0%  {opacity: 0}
+    60%{opacity:0 }
+    80%{opacity:100}
+    100%{opacity: 0}
+}
