@@ -1,39 +1,43 @@
-html,body,page{
+
+page{
     height: 100%;
     width: 100%;
-
-
-}
-page{
     font-size: 280px;
-    height: 100%;
     position: absolute;
-    margin: 0;
-    padding-left: 30%;
-    padding-top: 30%;
+    text-align: center;
+    padding-top: 70%;
 }
 #c{
-    background-color: greenyellow;
-    animation: c 2s infinite;
-    animation-timing-function: ease
+    background-image: url("../image/c.jpg");
+    background-size: 100% 100%;
+    animation: c 10s infinite;
+
 
 }
 #x{
-    background-color: yellow;
-    animation: x 2s infinite;
-    animation-timing-function: ease
+    background-image: url("../image/x.jpg");
+    background-size: 100% 100%;
+    animation: x 10s infinite;
+
 }
 #q{
-    background-color:darkorange;
-    animation: q 2s infinite;
-    animation-timing-function: ease
+    background-image: url("../image/q.jpg");
+    background-size: 100% 100%;
+    animation: q 10s infinite;
+
 
 }
 #d{
-    background-color:darkmagenta;
-    animation: d 2s infinite;
-    animation-timing-function: ease
+    background-image: url("../image/d.jpg");
+    background-size: 100% 100%;
+    animation: d 10s infinite;
 
+
+}
+#z{
+    font-size: 36px;
+    display: block;
+    animation: z 10s infinite;
 }
 @keyframes  c {
     0%  {opacity: 0}
@@ -59,5 +63,12 @@ page{
     0%  {opacity: 0}
     60%{opacity:0 }
     80%{opacity:100}
+    100%{opacity: 0}
+}
+@keyframes  z {
+    0%  {opacity: 0}
+    70%  {opacity: 0}
+    80%{opacity: 100}
+    90%{opacity: 0}
     100%{opacity: 0}
 }
