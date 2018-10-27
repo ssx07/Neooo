@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>猜猜看啊</title>
+    <script>
+        function guess () {
+            var  guess = prompt("猜一个数字0~6");
+            if (guess == a){
+                alert("Bingo");
+                // document.write("<img src =\"image/"+a+".jpg\"/>");
+            }
+            else if (guess>a){
+                alert("您猜大了");
+            }
+            else {
+                alert("您猜小了")
+            }
+        }
+
+        var a = Math.random();
+        a = Math.floor(a*6)+1;
+        guess();
+        guess();
+        document.write("<img src =\"image/"+a+".jpg\"/>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
