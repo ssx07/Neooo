@@ -1,55 +1,70 @@
-
+var  score = 0;
 function shitou() {
     document.getElementById("myChoice").innerHTML="<img src=../image/shitou.jpg>";
-    var  computerjieguo =  computerChoice();
-    juge("shitou",computerjieguo);
+
+    juge("shitou");
 
 }
 function jiandao() {
     document.getElementById("myChoice").innerHTML="<img src=../image/jiandao.jpg>";
-    var  computerjieguo =  computerChoice();
-    juge("jiandao",computerjieguo);
+
+    juge("jiandao");
 }
 function bu() {
     document.getElementById("myChoice").innerHTML="<img src=../image/bu.jpg>";
-    var  computerjieguo =  computerChoice();
-    juge("bu",computerjieguo);
+
+    juge("bu");
 }
-function  juge(myChoice,computerjieguo) {
+function  juge(myChoice) {
+    var  computerjieguo =  computerChoice();
+
     if (myChoice=="shitou"){
         if (computerjieguo=="shitou"){
             document.getElementById("result").innerHTML="Draw";
+
         }
         else if (computerjieguo=="jiandao"){
             document.getElementById("result").innerHTML="You Win";
+            score+=1;
         }
         else if (computerjieguo=="bu"){
             document.getElementById("result").innerHTML="You Lose";
+            score-=1;
         }
     }
     else  if (myChoice=="jiandao"){
         if (computerjieguo=="jiandao"){
             document.getElementById("result").innerHTML="Draw";
+            ;
         }
         else if (computerjieguo=="bu"){
             document.getElementById("result").innerHTML="You Win";
+            score+=1;
         }
         else if (computerjieguo=="shitou"){
             document.getElementById("result").innerHTML="You Lose";
+            score-=1;
         }
     }
     else  if (myChoice=="bu"){
         if (computerjieguo=="bu"){
             document.getElementById("result").innerHTML="Draw";
+                    ;
         }
         else if (computerjieguo=="shitou"){
             document.getElementById("result").innerHTML="You Win";
+            score+=1;
+
         }
         else if (computerjieguo=="jiandao"){
             document.getElementById("result").innerHTML="You Lose";
+            score-=1;
         }
     }
-
+    document.getElementById("score").innerHTML="得分 "+ score;
+    if (score==10){
+        document.getElementById("score").innerHTML="Congratulation"
+    }
 }
 
 function computerChoice() {
