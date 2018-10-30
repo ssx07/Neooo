@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #container div{
+            width: 350px;
+            height: 350px;
+            position: absolute;
+        }
+        #container{
+            width: 350px;
+            height: 350px;
+            background-image: url('image/dress/body.png');
+            position:absolute;
+            top: 20px;
+        }
+        #menu div{
+            float: left;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div id ="menu">
+    <div id ="suit" onclick="suit()">西装</div>
+    <div id ="haihun" onclick="haihun()">海魂衫</div>
+    <div id ="diaodai" onclick="diaodai()">吊带</div>
+    <div id ="xiku" onclick="xiku()">西裤</div>
+    <div id ="duanku" onclick="duanku()">短裤</div>
+</div>
+
+<div id ="container">
+    <div id ="upper">
+    </div>
+    <div id = "lower">
+    </div>
+</div>
+</body>
+<script>
+    function suit() {
+        document.getElementById("upper").style.backgroundImage="url('image/dress/upper1.png')";
+    }
+    function haihun() {
+        document.getElementById("upper").style.backgroundImage="url('image/dress/upper2.png')";
+    }
+    function diaodai() {
+        document.getElementById("upper").style.backgroundImage="url('image/dress/upper3.png')";
+    }
+    function xiku() {
+        document.getElementById("lower").style.backgroundImage="url('image/dress/lower1.png')";
+    }
+    function duanku() {
+        document.getElementById("lower").style.backgroundImage="url('image/dress/lower2.png')";
+    }
+</script>
+</html>

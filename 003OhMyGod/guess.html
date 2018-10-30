@@ -3,30 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>猜猜看啊</title>
-    <script>
-        function guess () {
-            var  guess = prompt("猜一个数字0~6");
-            if (guess == a){
-                alert("Bingo");
-                // document.write("<img src =\"image/"+a+".jpg\"/>");
-            }
-            else if (guess>a){
-                alert("您猜大了");
-            }
-            else {
-                alert("您猜小了")
-            }
+    <style>
+        body{
+            font-size: 150px;
+
         }
-
-        var a = Math.random();
-        a = Math.floor(a*6)+1;
-        guess();
-        guess();
-        document.write("<img src =\"image/"+a+".jpg\"/>");
-
-    </script>
+    </style>
 </head>
 <body>
-
+<div id ="message">
+</div>
 </body>
 </html>
+<script>
+    function guess () {
+        if (Bingo){
+            return;
+        }
+        var  guess = prompt("猜一个数字0~6");
+        if ((guess) >6||(guess)<1){
+            document.getElementById("message").innerHTML="您的输入有误";
+            return;
+        }
+        if (guess == a){
+            alert("Bingo");
+            // document.write("<img src =\"im age/"+a+".jpg\"/>");
+            document.getElementById("message").innerHTML ="<img src =\"image/"+a+".jpg\"/>";
+            Bingo = true;
+        }
+        else if (guess>a){
+            var cha = Math.abs(a-guess);
+            alert("您猜大了"+cha);
+        }
+        else {
+            var cha = Math.abs(a-guess);
+            alert("您猜小了"+cha);
+        }
+    }
+    var a = Math.random();
+    a = Math.floor(a*6)+1;
+    var  Bingo = false;
+    console.info(a);
+    guess();
+    guess();
+    // document.write("<img src =\"image/"+a+".jpg\"/>");
+
+</script>

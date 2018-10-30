@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="go()">
+
+</body>
+<script>
+    function  go() {
+        var r = Math.random();
+        // alert(r);
+        document.body.innerHTML=r;
+        if (r<0.3333333){
+            document.body.innerHTML="<img src=../image/shitou.jpg>";
+        }
+        else  if (r>0.66666667){
+            document.body.innerHTML="<img src=../image/jiandao.jpg>";
+        }
+        else {
+            document.body.innerHTML="<img src=../image/bu.jpg>";
+        }
+
+    }
+</script>
+</html>

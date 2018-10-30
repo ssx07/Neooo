@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #Button{
+            height:100px;
+            width: 100px;
+            background-image:url("image/music.gif");
+        }
+    </style>
+
+</head>
+<body>
+<audio id="bgm" src="../001base/music/bgm.mp3" preload="auto" loop=loop autoplay="autoplay"></audio>
+    <div id ="Button" onclick="control()">
+    </div>
+</body>
+<script>
+    // var isPlaying =true;
+    function control() {
+        if(document.getElementById("bgm").paused){
+            document.getElementById("bgm").play();
+            document.getElementById("Button").style.backgroundImage= "url('image/music.gif')";
+            // isPlaying=!isPlaying;
+        }
+        else {
+            document.getElementById("bgm").pause();
+            document.getElementById("Button").style.backgroundImage= "url('image/stoped.gif')";
+            // isPlaying=!isPlaying;
+        }
+    }
+</script>
+</html>
